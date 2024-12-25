@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #148ad9;
+        margin: 0;
+    }
+    
+    .button-container {
+        text-align: center;
+    }
+    
+    .experience-btn {
+        background-color: #1c5cbb;
+        color: rgb(145, 172, 240);
+        font-size: 18px;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    
+    .experience-btn:hover {
+        background-color: #1a68bc;
+        transform: scale(1.05);
+    }
+    
+    .experience-btn:active {
+        background-color: #2fafd5;
+        transform: scale(1);
+    }
+    
+    .experience-text {
+        display: none;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #e0f7fa;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    </style>    
+</head>
+<body>
+    <div class="button-container">
+        <button class="experience-btn" onclick="showExperience()">Experience Our Service</button>
+        <div class="experience-text" id="experience-text">
+            <h3>Why Choose Our Airline?</h3>
+            <ul>
+                <li>Comfortable seating with ample legroom</li>
+                <li>Delicious gourmet meals and beverages</li>
+                <li>Onboard entertainment and Wi-Fi</li>
+                <li>Priority check-in and boarding for premium passengers</li>
+                <li>Personalized service with a smile</li>
+            </ul>
+            <p>Book your flight today and enjoy a world-class travel experience!</p>
+        </div>
+    </div>
+
+    <script>
+        function showExperience() {
+            var experienceText = document.getElementById('experience-text');
+            if (experienceText.style.display === 'block') {
+                experienceText.style.display = 'none';
+            } else {
+                experienceText.style.display = 'block';
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
